@@ -10,8 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "tb_veiculo")
-public class Veiculo implements Serializable{
+@Table(name = "tb_category")
+public class Category  implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	@Id
@@ -19,10 +19,10 @@ public class Veiculo implements Serializable{
 	private Long id;
 	private String name;
 	
-	public Veiculo() {
+	public Category() {
 	}
 
-	public Veiculo(Long id, String name) {
+	public Category(Long id, String name) {
 		this.id = id;
 		this.name = name;
 	}
@@ -56,8 +56,9 @@ public class Veiculo implements Serializable{
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Veiculo other = (Veiculo) obj;
+		Category other = (Category) obj;
 		return Objects.equals(id, other.id);
 	}
 	
 }
+	

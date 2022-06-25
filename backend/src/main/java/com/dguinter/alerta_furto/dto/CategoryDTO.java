@@ -2,28 +2,28 @@ package com.dguinter.alerta_furto.dto;
 
 import java.io.Serializable;
 
-import com.dguinter.alerta_furto.entities.Veiculo;
+import com.dguinter.alerta_furto.entities.Category;
 
-public class VeiculoDTO implements Serializable{
+
+public class CategoryDTO implements Serializable{
 	private static final long serialVersionUID = 1L;
 
 	private Long id;
 	private String name;
 	
-	public VeiculoDTO( ) {
+	public CategoryDTO( ) {
 		
 	}
 	
-	public VeiculoDTO(Long id, String name) {
+	public CategoryDTO(Long id, String name) {
 		this.id = id;
 		this.name = name;
 	}
 	
-	public VeiculoDTO(Veiculo entity) {
-		this. id = entity.getId();
+	public CategoryDTO(Category entity) {
+		this.id = entity.getId();
 		this.name = entity.getName();
-			
-		}
+	}
 
 	public Long getId() {
 		return id;
@@ -43,3 +43,4 @@ public class VeiculoDTO implements Serializable{
 	
 	
 }
+
